@@ -3,7 +3,7 @@ public class Conta {
 	int numero;
 	String agencia;
 	double saldo;
-	String dataDeAbertura;
+	Date dataDeAbertura = new Date();
 
 	public void saca(double valor) {
 		saldo -= valor;
@@ -22,7 +22,7 @@ public class Conta {
 			   "\nNumero: " + numero + 
 			   "\nAgencia: " + agencia + 
 			   "\nSaldo: " + saldo + 
-			   "\nData de abertura: " + dataDeAbertura;
+			   "\nData de abertura: " + dataDeAbertura.formatada();
 	}
 
 	@Override
@@ -31,7 +31,7 @@ public class Conta {
 			   "\nNumero: " + numero + 
 			   "\nAgencia: " + agencia + 
 			   "\nSaldo: " + saldo + 
-			   "\nData de abertura: " + dataDeAbertura;
+			   "\nData de abertura: " + dataDeAbertura.formatada();
 	}
 
 }
