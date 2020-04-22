@@ -1,16 +1,25 @@
 public class Conta {
+	private int identificador;
+	private static int totalDeContas;
 	private String nome;
 	private int numero;
 	private String agencia;
 	private double saldo;
 	private Date dataDeAbertura = new Date();
 
-	Conta() {}
+	Conta() {
+		Conta.totalDeContas += 1;
+		identificador = totalDeContas;	
+	}
 
 	Conta(String titular) {
+		this();
 		this.nome = titular;
 	}
 
+	public int getIdentificador() {
+		return identificador;
+	}
 
 	public void setNome(String nome) {
 		this.nome = nome;
