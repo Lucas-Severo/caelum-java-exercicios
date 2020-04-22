@@ -60,6 +60,11 @@ public class Conta {
 	}
 
 	public void setDataDeAbertura(int dia, int mes, int ano) {
+		if(!((dia >= 1 && dia <= 31) && (mes >= 1 && mes <= 12) && ano > 0))
+			return;
+		if((mes == 2 && dia > 29))
+			return;
+
 		dataDeAbertura.dia = dia;
 		dataDeAbertura.mes = mes;
 		dataDeAbertura.ano = ano;

@@ -6,7 +6,7 @@ public class TestaConta {
 		c1.setNumero(123);
 		c1.setAgencia("45678-9");
 		c1.deposita(50.0);
-		c1.setDataDeAbertura(04, 06, 2015);
+		c1.setDataDeAbertura(31, 06, 2015);
 
 		System.out.println(c1.getIdentificador());
 		System.out.println(c1.getNome());
@@ -16,7 +16,9 @@ public class TestaConta {
 		System.out.println(c1.getDataDeAbertura());
 
 		Conta c2 = new Conta("Joao");
+		c2.setDataDeAbertura(28, 02, 2018);
 		System.out.println(c2.getIdentificador());
+		System.out.println(c2.getDataDeAbertura());
 
 		Conta c3 = new Conta();
 		System.out.println(c3.getIdentificador());
